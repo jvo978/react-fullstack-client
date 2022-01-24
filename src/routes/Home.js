@@ -15,7 +15,7 @@ function Home() {
           if (!localStorage.getItem('accessToken')) {
             navigate('/login')
           } else {
-            axios.get("http://localhost:3001/posts", { 
+            axios.get("https://react-full-stack-api-jvo978.herokuapp.com//posts", { 
               headers: { accessToken: localStorage.getItem("accessToken")}
             }).then((response) => {
               setListOfPosts(response.data.listOfPosts)
@@ -27,7 +27,7 @@ function Home() {
         }, [authState.status]);
 
     const likeAPost = (postId) => {
-      axios.post("http://localhost:3001/likes", { PostId: postId }, { headers: {
+      axios.post("https://react-full-stack-api-jvo978.herokuapp.com//likes", { PostId: postId }, { headers: {
         accessToken: localStorage.getItem("accessToken")
       }}).then((response) => {
         setListOfPosts(listOfPosts.map((post) => {

@@ -22,17 +22,17 @@ function Post() {
         if (!localStorage.getItem('accessToken')) {
             navigate('/login')
         } else {
-            axios.get(`http://localhost:3001/posts/${id}`).then((response) => {
+            axios.get(`https://react-full-stack-api-jvo978.herokuapp.com//posts/${id}`).then((response) => {
                 setPostObject(response.data)
             })
-            axios.get(`http://localhost:3001/comments/${id}`).then((response) => {
+            axios.get(`https://react-full-stack-api-jvo978.herokuapp.com//comments/${id}`).then((response) => {
                 setComments(response.data)
             })
         }
     }, [id, authState.status]);
 
     const addNewComment = () => {
-        axios.post('http://localhost:3001/comments', {
+        axios.post('https://react-full-stack-api-jvo978.herokuapp.com//comments', {
             commentBody: newComment,
             PostId: id
         }, {
@@ -51,7 +51,7 @@ function Post() {
     }
 
     const deleteComment = (id) => {
-        axios.delete(`http://localhost:3001/comments/${id}`, { 
+        axios.delete(`https://react-full-stack-api-jvo978.herokuapp.com//comments/${id}`, { 
             headers: {
                 accessToken: localStorage.getItem("accessToken")
             }
@@ -63,7 +63,7 @@ function Post() {
     }
 
     const deletePost = (id) => {
-        axios.delete(`http://localhost:3001/posts/${id}`, { 
+        axios.delete(`https://react-full-stack-api-jvo978.herokuapp.com//posts/${id}`, { 
             headers: {
                 accessToken: localStorage.getItem("accessToken")
             }
@@ -90,14 +90,14 @@ function Post() {
 
     const updatePost = (postId, options) => {
         if (options === 'title') {
-            axios.put(`http://localhost:3001/posts/title`, { newTitle: updatedTitle,  id: postId }, { headers: {
+            axios.put(`https://react-full-stack-api-jvo978.herokuapp.com//posts/title`, { newTitle: updatedTitle,  id: postId }, { headers: {
                 accessToken: localStorage.getItem('accessToken')
             }}).then(() => {
                 setEditTitleStatus(false)
                 setPostObject({ ...postObject, title: updatedTitle })
             })
         } else {
-            axios.put(`http://localhost:3001/posts/postText`, { newPostText: updatedBody, id: postId }, { headers: {
+            axios.put(`https://react-full-stack-api-jvo978.herokuapp.com//posts/postText`, { newPostText: updatedBody, id: postId }, { headers: {
                 accessToken: localStorage.getItem('accessToken')
             }}).then(() => {
                 setEditBodyStatus(false)
