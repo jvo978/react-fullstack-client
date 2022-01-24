@@ -24,7 +24,7 @@ function ChangePassword() {
     }
 
     const changePassword = () => {
-        axios.put('https://react-full-stack-api-jvo978.herokuapp.com//auth/changepassword', { oldPassword: oldPassword, newPassword: newPassword }, { headers: {
+        axios.put('https://react-full-stack-api-jvo978.herokuapp.com/auth/changepassword', { oldPassword: oldPassword, newPassword: newPassword }, { headers: {
             accessToken: localStorage.getItem('accessToken')
         }}).then((response) => {
             if (response.data.error) {

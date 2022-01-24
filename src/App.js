@@ -21,7 +21,7 @@ function App() {
   const [authState, setAuthState] = useState({ username: "", id: 0, status: false })
 
   useEffect(() => {
-    axios.get("https://react-full-stack-api-jvo978.herokuapp.com//auth/check", { headers: {
+    axios.get("https://react-full-stack-api-jvo978.herokuapp.com/auth/check", { headers: {
       accessToken: localStorage.getItem("accessToken")
     }})
       .then((response) => {

@@ -21,7 +21,7 @@ function Login() {
 
 
     const signIn = () => {
-        axios.post('https://react-full-stack-api-jvo978.herokuapp.com//auth/login', { username: username, password: password }).then((response) => {
+        axios.post('https://react-full-stack-api-jvo978.herokuapp.com/auth/login', { username: username, password: password }).then((response) => {
             if (response.data.error) {
                 alert(response.data.error);
                 setUsername('')

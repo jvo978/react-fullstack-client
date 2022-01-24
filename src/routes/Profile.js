@@ -19,10 +19,10 @@ function Profile() {
         if (!localStorage.getItem('accessToken')) {
             navigate('/login')
           } else {
-            axios.get(`https://react-full-stack-api-jvo978.herokuapp.com//auth/basicInfo/${id}`).then((response) => {
+            axios.get(`https://react-full-stack-api-jvo978.herokuapp.com/auth/basicInfo/${id}`).then((response) => {
             setUsername(response.data.username)
        })
-            axios.get(`https://react-full-stack-api-jvo978.herokuapp.com//posts/byUserId/${id}`).then((response) => {
+            axios.get(`https://react-full-stack-api-jvo978.herokuapp.com/posts/byUserId/${id}`).then((response) => {
             setListOfPosts(response.data)
    })
           }

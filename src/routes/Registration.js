@@ -30,7 +30,7 @@ function Registration() {
     })
 
     const onSubmit = (data) => {
-        axios.post('https://react-full-stack-api-jvo978.herokuapp.com//auth', data).then(response => {
+        axios.post('https://react-full-stack-api-jvo978.herokuapp.com/auth', data).then(response => {
             navigate('/login')
         })
     }
