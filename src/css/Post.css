@@ -1,0 +1,216 @@
+.individualPost__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 100px;
+    width: 100%;
+    height: 100vh;
+}
+
+.individualPost__left {
+    display: flex;
+    justify-content: center;
+    flex: 50%;
+    height: 300px;
+    max-width: 350px;
+    min-width: 350px;
+    flex-direction: column;
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .title__container {
+    flex: 20%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: lightslategray;
+    border-bottom: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .updateContainer__edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .updateContainer__edit input {
+    height: 26px;
+    width: 150px;
+  }
+
+  .updateContainer__edit input::placeholder{
+    padding-left: 5px;
+  }
+
+
+  .individualPost__title {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .individualPost__title .title__text {
+    display: flex;
+    align-items: center;
+  }
+
+  .individualPost__title .editTitleButton {
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .individualPost__body {
+    flex: 60%;
+    position: relative;
+    color: black;
+    background-color: lightyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .individualPost__body .editBodyButton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .individualPost__footer {
+    flex: 20%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    border-top: 1px solid black;
+    background-color: lightslategray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .individualPost__footer .username {
+    flex: 50%;
+  }
+
+  .individualPost__footer .button {
+    flex: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .individualPost__footer button:hover {
+    background-color: lightgrey;
+    color: white
+  }
+
+.comment__right {
+    flex: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    border-color: black;
+    border-radius: 10px;
+    max-width: 550px;
+}
+
+.comment__right input{
+  width: 200px;
+  height: 30px;
+  outline: none;
+}
+
+.addComment__container button {
+  background-color: lightslategray;
+  color: white;
+  width: 100px;
+  height: 36px;
+  border-radius: 0;
+}
+
+.addComment__container button:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+  color: black;
+}
+
+.addComment__container {
+  display: flex;
+  align-items: center;
+}
+
+.commentBody__container {
+  position: relative;
+  word-break: break-all;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 150px;
+  background-color: lightyellow;
+}
+
+.commentBody__delete {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.commentBody {
+  padding: 0px 15px;
+  /* border: 1px solid black; */
+}
+
+.listOfComments label {
+  padding-left: 10px;
+}
+
+.listOfComments button {
+  background-color: red;
+  color: white;
+  width: 60px;
+  height: 35px;
+}
+
+.listOfComments button:hover {
+  background-color: lightgrey;
+  color: black;
+  cursor: pointer;
+}
+
+.cancel {
+  color: white;
+  background-color: red;
+  margin-left: 0;
+  width: 60px;
+  height: 30px;
+  border-radius: 0;
+}
+
+.cancel:hover {
+  background-color: lightgrey;
+  color: black;
+  cursor: pointer;
+}
